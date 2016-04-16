@@ -46,6 +46,7 @@ app.controller("ctrl",function($scope){
   $scope.setInputValue = function(Id){
     console.log("yo");
     $scope.search = Id;
+    document.getElementById('completeList').style.display = 'none';
   };
   
   $scope.showList = function(){
