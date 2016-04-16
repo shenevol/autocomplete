@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    .show{
+      display:block;
+    }
+    .hide{
+      display:none; 
+    }
+  </style>
+</head>
+<body ng-controller="ctrl">
+  <input type="text" ng-model="search" ng-change="listenChange()" ng-blur="hide()">
+  {{search}}
+  <div id="completeList"  style="display:none;border:1px solid black"><div ng-repeat="option in selectList ">{{option.id}}{{option.name}}</div></div>
+</body>
+</html>

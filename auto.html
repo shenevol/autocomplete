@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script type="text/javascript" src="auto.js"></script>
+<style type="text/css">
+  #selectOption:hover{
+    color: red;
+  }
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>AutoComplete</title>
+</head>
+<body ng-controller="ctrl">
+  <input type="text" ng-model="search" ng-change="listenChange()" ng-blur="hideList()" ng-focus="showList()">
+  {{search}}
+  <div id="completeList"  style="display:none;border:1px solid black;width:172px">
+    <div id="selectOption" ng-repeat="option in selectList" ng-click="setInputValue(option.id)">{{option.id}}{{option.name}}</div>
+  </div>
+</body>
+</html>
